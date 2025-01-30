@@ -8,7 +8,7 @@ public class Paper : MonoBehaviour
     private Vector3 startPos;
     private Vector3 endPos;
     private bool isThrown = false;
-    private float throwForce = 5f; // Increased force for a natural throw
+    public float throwForce = 5f; // Increased force for a natural throw
 
     // Stores initial spawn position
     private Vector3 initialPos;
