@@ -27,7 +27,7 @@ public class Paper : MonoBehaviour
         if (!isThrown)
         {
             // Floating Effect (before throw)
-            transform.position += new Vector3(0, Mathf.Sin(Time.time * 2f) * 0.005f, 0);
+            transform.position += new Vector3(0, Mathf.Cos(Time.time * 2f) * 0.005f, 0);
         }
 
         if (Input.GetMouseButtonDown(0)) // Start Drag
@@ -83,8 +83,8 @@ public class Paper : MonoBehaviour
         transform.position = initialPos;
         rb.velocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
-        rb.useGravity = false; // Disable gravity again
-        rb.drag = 0.2f; // Reset drag
+        rb.useGravity = false; 
+        rb.drag = 0.2f;
         isThrown = false;
     }
 }
