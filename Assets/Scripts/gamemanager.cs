@@ -5,30 +5,30 @@ using UnityEngine.UI;
 
 public class gamemanager : MonoBehaviour
 {
-    public Text scoreText;
+    public score scoreManager; 
     public Slider powerBar;
+    public paper paperScript;
 
-    private int currentScore = 0;
-
-    void Start()
+    void Update()
     {
-        UpdateScoreUI();
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            RG();
+        }
+
+        if (powerBar && paperScript)
+        {
+            powerBar.value = paperScript.throwForce / 10f; // Normalize throw force (Assuming max is 10)
+        }
     }
 
-    public void IncreaseScore()
+    void ResetGame()
     {
-        currentScore++;
-        UpdateScoreUI();
+        paperScript.ResetBall();
+        scoreManager.AddScore();
     }
-
-    void UpdateScoreUI()
+    void RG()
     {
-        scoreText.text = "Score: " + currentScore;
-        Debug.Log("Score: " + currentScore);
-    }
-
-    public void UpdatePowerBar(float value)
-    {
-        powerBar.value = value; // Updates power bar UI
+        paperScript.ResetBall();
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ScoreManager : MonoBehaviour
+public class score : MonoBehaviour
 {
     public Text scoreText;
     public Slider powerBar;
@@ -13,22 +13,25 @@ public class ScoreManager : MonoBehaviour
     void Start()
     {
         UpdateScoreUI();
+        if (powerBar)
+            powerBar.value = 0;
     }
 
-    public void IncreaseScore()
+    public void AddScore()
     {
         currentScore++;
         UpdateScoreUI();
     }
 
-    void UpdateScoreUI()
+    public void UpdatePowerBar(float value)
+    {
+        if (powerBar)
+            powerBar.value = value;
+    }
+
+    private void UpdateScoreUI()
     {
         scoreText.text = "Score: " + currentScore;
         Debug.Log("Score: " + currentScore);
-    }
-
-    public void UpdatePowerBar(float value)
-    {
-        powerBar.value = value; // Updates power bar UI
     }
 }
