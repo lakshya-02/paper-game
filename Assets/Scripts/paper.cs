@@ -1,3 +1,5 @@
+/*This Script is for properties of Paper , check if is it thrown or not , add the Sin function , 
+add the reset ball function , Define the logic of Resetball.*/ 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

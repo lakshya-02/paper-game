@@ -1,3 +1,5 @@
+/* This Script Delay the spawn of Ball on score or miss and 
+connected to paper and score the half score increase logic is there*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

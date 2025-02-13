@@ -1,3 +1,5 @@
+/*This Script is mainly for UI as Text and PowerBar is there and 
+score is define but proper logic isn't  */
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
